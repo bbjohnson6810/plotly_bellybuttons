@@ -1,0 +1,89 @@
+<!--before opening, navigate to directory in terminal and execute: python -m http.server [port #]-->
+<!--copy http address into browser-->
+<!--if chrome console shows errors due to files in a diferent directory, clear the cache in chrome and retry-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1><strong>Belly Button Biodiversity Dashboard</strong></h1>
+        <p><strong>Use the interactive charts below to explore the dataset</strong></p>
+      </div>
+    </div>
+    <div class="blurb-bg">
+          <div class="row">
+      <div class="col-md-3" id=navelpic1>
+        <a>
+          <img class="img-responsive" src="static/images/stomach1.jpeg">
+        </a>
+      </div>
+      <div class="col-md-6" id=intro-blurb>
+        <p> <strong>Is your navel home to a unique community of microorganisms?</strong> 
+          <br><br>
+          This dashboard presents data from 153 individuals whose belly buttons were sampled for bacteria. 
+          Operational taxon units (OTUs) were identified from all individuals to characterize the microbial community in their navels
+          and identify potential species useful for synthetic meat production.
+          <br><br>
+          Use the dropdown menu below to search through anonymized results. Individual results include the top 10 most common OTUs,
+          the frequency with which the subject washed their navel, and the counts of all identified OTUs. 
+        </p>
+      </div>
+      <div class="col-md-3" id=navelpic2>
+        <a>
+          <img class="img-responsive" src="static/images/stomach2.jpeg">
+        </a>
+      </div>
+    </div>
+    </div>
+    <div class="row form-group"></div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+    <div class="row form-group"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>

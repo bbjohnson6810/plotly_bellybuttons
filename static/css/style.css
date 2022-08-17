@@ -1,0 +1,23 @@
+.jumbotron {
+  background-image: url("../images/buttons2.png");
+  background-size: 100% 200%;
+  text-align: center;
+  color:black;
+}
+
+blurb-img {
+  width: 200px;
+  height: 200px;
+}
+
+.form-group {
+  margin-bottom: 40px;
+}
+
+.blurb-bg {
+  background: lightgray;
+}
+
+#intro-blurb {
+  font-size: 16px;
+}
